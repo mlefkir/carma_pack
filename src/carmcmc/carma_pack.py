@@ -978,7 +978,7 @@ class Car1Sample(CarmaSample):
                 "nsamples must be less than the total number of MCMC samples."
 
             nsamples0 = sigmas.shape[0]
-            index = np.arange(nsamples) * (nsamples0 / nsamples)
+            index = np.arange(nsamples) * int(nsamples0 / nsamples)
             sigmas = sigmas[index]
             log_omegas = log_omegas[index]
 
